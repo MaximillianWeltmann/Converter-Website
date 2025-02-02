@@ -1,0 +1,210 @@
+/* Genel Stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Siyah Arka Plan */
+    color: #E4E4E4; /* Açık Gri Yazı */
+    display: flex;
+    justify-content: center; /* Yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    min-height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    font-size: 1rem; /* Temel font boyutu */
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 62.5em; /* 1000px yerine em cinsinden */
+    padding: 1.25em;
+    background-color: #1C1C1C;
+    border-radius: 0.625em;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 1.875em; /* 30px yerine em cinsinden */
+}
+
+h1 {
+    font-size: 2.75em; /* 3rem yerine em cinsinden */
+    margin-bottom: 1em;
+    color: #00B8F4; /* Parlak Mavi Başlık */
+}
+
+.conversion-options {
+    display: flex;
+    justify-content: center;  /* Ortalamayı sağlamak için 'center' kullanıyoruz */
+    gap: 1.875em; /* 30px yerine em cinsinden */
+    width: 100%;
+}
+
+.input-box {
+    width: 40%;  /* Orta hizalamak için yüzde 40 genişlik veriyoruz */
+    background-color: #2C2C2C;
+    padding: 1.25em;
+    border-radius: 0.625em;
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.3);
+}
+
+.file-list {
+    width: 40%;  /* Orta hizalamak için yüzde 40 genişlik veriyoruz */
+    background-color: #2C2C2C;
+    padding: 1.25em;
+    border-radius: 0.625em;
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.3);
+    max-height: 31.25em; /* 500px yerine em cinsinden */
+    overflow-y: auto;
+    padding-right: 0.625em; /* 10px yerine em cinsinden */
+    display: flex;
+    flex-direction: column;
+    gap: 0.9375em; /* 15px yerine em cinsinden */
+    align-items: flex-start;
+}
+
+/* Scrollbar Tasarımı */
+.file-list::-webkit-scrollbar {
+    width: 0.5em; /* 8px yerine em cinsinden */
+}
+
+.file-list::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+.file-list::-webkit-scrollbar-thumb {
+    background: #00B8F4;
+    border-radius: 0.625em; /* 10px yerine em cinsinden */
+}
+
+.file-list::-webkit-scrollbar-thumb:hover {
+    background: #0097a7;
+}
+
+input[type="file"], select, input[type="url"] {
+    padding: 0.75em; /* 12px yerine em cinsinden */
+    margin: 0.75em 0;
+    border-radius: 0.3125em; /* 5px yerine em cinsinden */
+    border: 0.0625em solid #444; /* 1px yerine em cinsinden */
+    background-color: #1A1A1A;
+    color: #fff;
+    width: 100%;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.75em 1.5em; /* 12px 24px yerine em cinsinden */
+    background-color: #00B8F4; /* Parlak Mavi Buton */
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 0.3125em; /* 5px yerine em cinsinden */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0097a7; /* Buton Hover Rengi */
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.625em; /* 10px yerine em cinsinden */
+    margin-bottom: 0.625em; /* 10px yerine em cinsinden */
+    background-color: #333;
+    padding: 0.625em; /* 10px yerine em cinsinden */
+    border-radius: 0.3125em; /* 5px yerine em cinsinden */
+    width: 100%;
+}
+
+.file-item img {
+    width: 3.125em; /* 50px yerine em cinsinden */
+    height: 3.125em; /* 50px yerine em cinsinden */
+    object-fit: cover;
+    border-radius: 0.3125em; /* 5px yerine em cinsinden */
+}
+
+.file-item .info {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #E4E4E4;
+    text-align: left;
+}
+
+.download-btn {
+    padding: 0.375em 0.75em; /* 6px 12px yerine em cinsinden */
+    background-color: #00B8F4;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.3125em; /* 5px yerine em cinsinden */
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: #0097a7;
+}
+
+/* Center alignment for file list container */
+.file-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.625em; /* 10px yerine em cinsinden */
+    overflow-y: auto;
+    padding-right: 0.625em; /* 10px yerine em cinsinden */
+}
+
+.file-item {
+    width: 90%; /* Daha geniş bir alan için genişliği %90 yapıyoruz */
+    text-align: left;
+}
+
+/* YouTube Linki Bölümü */
+.youtube-link {
+    background-color: #2C2C2C;
+    padding: 1.25em;
+    border-radius: 0.625em;
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.3);
+    width: 60%;
+    margin: 2em 0;
+    margin: auto;
+    display: none;
+}
+
+.youtube-link input {
+    margin-bottom: 1em;
+}
+
+.youtube-link button {
+    width: 100%;
+    padding: 1em;
+    background-color: #00B8F4;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 0.3125em;
+}
+
+.youtube-link button:hover {
+    background-color: #0097a7;
+}
+label[for="jpegFiles"] {
+    background-color: #333; /* Change this to your preferred background color */
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  label[for="jpegFiles"]:hover {
+    background-color: #555; /* Darker shade on hover */
+  }

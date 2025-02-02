@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dönüştürme Aracı</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dönüştürme Aracı</h1>
+        <div class="conversion-options">
+            <div class="input-box">
+                <h2>Dosya Seç</h2>
+                <input type="file" id="jpegFiles" accept="image/jpeg, audio/*, video/mp4" multiple="" onchange="checkFiles()">
+                <label for="formatSelect">Hangi formata dönüştürmek istersiniz?</label>
+                <select id="formatSelect">
+                    <option value="png">PNG</option>
+                    <option value="webp">WEBP</option>
+                    <option value="gif">GIF</option>
+                    <option value="bmp">BMP</option>
+                    <option value="jpeg">JPEG</option>
+                    <!-- Başlangıçta görüntü formatları -->
+                </select>
+                <button onclick="convertFiles()">Dönüştür</button>
+            </div>
+            <div class="file-list" id="fileList">
+                <h2>Dönüştürülen Dosyalar</h2>
+                <!-- Dosya listesi burada görünecek -->
+            </div>
+        </div>
+
+        <!-- YouTube Linki Ekleme Bölümü -->
+        <div class="youtube-link">
+            <h2>YouTube Video Linki</h2>
+            <input type="url" id="youtubeUrl" placeholder="YouTube video linkini buraya yapıştırın">
+            <button onclick="processYoutubeLink()">Linki İşle</button>
+            <div id="downloadLinkContainer"></div>  <!-- Burada indirme linki görünecek -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.8.0/jszip.min.js"></script>
+</body>
+</html>
