@@ -1,0 +1,279 @@
+/* =============== FOOTER STYLES =============== */
+
+/**
+ * Footer Styles for Quantum Converter
+ */
+
+.footer {
+    position: relative;
+    background: linear-gradient(180deg, rgba(16, 14, 36, 0.8) 0%, rgba(23, 22, 50, 0.95) 100%);
+    padding: 70px 0 30px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 50px);
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgzMCkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiM0MmY1YmIiIG9wYWNpdHk9IjAuMSIgLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiIC8+PC9zdmc+');
+    background-size: 200px;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-widget {
+    color: var(--text-color);
+}
+
+.footer-widget.about-widget {
+    grid-column: span 2;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+    max-width: 240px;
+}
+
+.quantum-logo-footer {
+    width: 100%;
+    height: auto;
+}
+
+.footer-description {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-bottom: 25px;
+    max-width: 90%;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(110, 66, 245, 0.3);
+}
+
+.widget-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.widget-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--accent-color);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    padding-left: 0;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.footer-links a::before {
+    content: '›';
+    position: absolute;
+    left: -10px;
+    top: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: var(--accent-color);
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    left: -5px;
+}
+
+.newsletter-form {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 12px 50px 12px 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.newsletter-form .submit-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 45px;
+    background: var(--accent-color);
+    border: none;
+    color: white;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-form .submit-btn:hover {
+    background: var(--accent-hover-color);
+}
+
+.form-note {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.copyright {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-bottom-links a {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-widget.about-widget {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 50px 0 20px;
+    }
+    
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-widget.about-widget {
+        grid-column: span 1;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-bottom-links {
+        justify-content: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .widget-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-widget {
+        text-align: center;
+    }
+    
+    .footer-links a::before {
+        display: none;
+    }
+    
+    .footer-links a:hover {
+        padding-left: 0;
+    }
+} 
